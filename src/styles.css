@@ -1,0 +1,90 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color-scheme: light dark;
+}
+
+body { margin: 0; padding: 0; }
+
+.container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+header { margin-bottom: 1rem; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap: 1rem;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem;
+  background: #fff;
+  color: #111;
+}
+
+.badge { padding: 0.125rem 0.5rem; border-radius: 999px; font-size: 12px; }
+.badge.guest { background: #eee; }
+.badge.free { background: #d7eaff; }
+.badge.startup { background: #fce7b2; }
+.badge.professional { background: #e2d4ff; }
+
+.row { display:flex; gap:.5rem; align-items:center; flex-wrap:wrap; }
+
+button {
+  border: 1px solid #bbb;
+  background: #f6f6f6;
+  border-radius: 8px;
+  padding: .5rem .75rem;
+  cursor: pointer;
+}
+button.primary { background:#613493; color:#fff; border-color:#613493; }
+button.link { background: transparent; border: none; color: #613493; text-decoration: underline; cursor: pointer; }
+
+.banner {
+  border: 1px dashed #613493;
+  border-radius: 10px;
+  padding: .75rem;
+  background: #f7f1ff;
+}
+/* Layout */
+.appbar { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #eee; }
+.nav { max-width: 960px; margin: 0 auto; padding: 0.75rem 1rem; display: flex; align-items: center; }
+.nav__brand { font-weight: 700; text-decoration: none; }
+.nav__link { margin-left: 1rem; text-decoration: none; }
+.nav__spacer { flex: 1; }
+
+.container { max-width: 960px; margin: 0 auto; padding: 1rem; }
+
+/* Card */
+.card {
+  background: #fff; border: 1px solid #e8e8e8; border-radius: 16px;
+  padding: 1.25rem; box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+.card__name { font-size: 1.25rem; margin: 0 0 0.25rem; }
+.card__bio { color: #4b5563; margin: 0 0 1rem; }
+
+/* Form */
+.form__label { display: block; font-weight: 600; margin: 0.5rem 0 0.25rem; }
+.form__input {
+  width: 100%; padding: 0.6rem 0.75rem; border-radius: 10px;
+  border: 1px solid #d1d5db; outline: none; transition: border-color .15s;
+  margin-bottom: 0.25rem;
+}
+.form__input:focus { border-color: #613493; }
+.form__input.is-error { border-color: #ef4444; }
+.form__error { color: #b91c1c; font-size: 0.85rem; margin: 0 0 0.5rem; }
+.form__server-error {
+  background: #fee2e2; border: 1px solid #fecaca; color: #7f1d1d;
+  padding: 0.5rem 0.75rem; border-radius: 10px; margin: 0 0 0.75rem;
+}
+.form__hint { font-size: 0.9rem; color: #6b7280; margin-top: 0.75rem; }
+
+/* Buttons */
+.btn {
+  appearance: none; border: 0; border-radius: 999px; padding: 0.6rem 1rem;
+  cursor: pointer; font-weight: 600; margin-top: 0.5rem;
+}
+.btn[disabled] { opacity: 0.6; cursor: not-allowed; }
+.btn--primary { background: #613493; color: white; }
+.btn--secondary { background: #f3f4f6; color: #111827; }
